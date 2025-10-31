@@ -1,6 +1,8 @@
 <?php
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,3 +20,5 @@ Route::get('/', function () {
 // Route::delete('users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 
 Route::resource('users',UserController::class);
+
+Route::resource('tasks', TaskController::class);
